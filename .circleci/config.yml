@@ -10,12 +10,12 @@ version: 2
        - run:
            name: Deploy Over SSH
            command: |
-             ssh $dkawanam@130.211.127.76 -p 22 "cd /var/www/html; git pull origin master:master;
- workflows:
-   version: 2
-   build-and-deploy:
-     jobs:
-       - deploy:
-           filters:
-             branches:
-               only: master
+             ssh dkawanam@130.211.127.76  "cd /var/www/html; git pull origin master:master;
+ # workflows:
+ #   version: 2
+ #   build-and-deploy:
+ #     jobs:
+ #       - deploy:
+ #           filters:
+ #             branches:
+ #               only: master
