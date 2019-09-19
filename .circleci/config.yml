@@ -6,7 +6,7 @@ jobs:
      steps:
        - add_ssh_keys:
            fingerprints:
-             - "SHA256:yNjfYNINYsuPF6tzj/n4jL+/P4omgHwRKdHgX0V63JY dkawanam@daisuke-ga"
+             - "31:da:0e:03:83:88:f1:a0:f7:b3:30:9a:2f:9f:35:b7"
   deploy:
     machine:
       enabled: true
