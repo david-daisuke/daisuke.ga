@@ -1,5 +1,12 @@
 version: 2
 jobs:
+  build:
+     machine:
+       enabled: true
+     steps:
+       - add_ssh_keys:
+           fingerprints:
+             - "SHA256:yNjfYNINYsuPF6tzj/n4jL+/P4omgHwRKdHgX0V63JY dkawanam@daisuke-ga"
   deploy:
     machine:
       enabled: true
