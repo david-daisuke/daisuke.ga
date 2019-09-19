@@ -1,0 +1,21 @@
+version: 2
+ jobs:
+   deploy:
+     machine:
+       enabled: true
+     steps:
+       - add_ssh_keys:
+           fingerprints:
+             - "6a:d4:e3:ff:9c:7a:28:30:8f:34:38:5b:3a:dc:08:6e"
+       - run:
+           name: Deploy Over SSH
+           command: |
+             ssh $dkawanam@130.211.127.76 -p 22 "cd /var/www/html; git pull origin master:master;
+ workflows:
+   version: 2
+   build-and-deploy:
+     jobs:
+       - deploy:
+           filters:
+             branches:
+               only: master
