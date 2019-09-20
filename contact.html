@@ -76,34 +76,39 @@
         <div class="col-md-8 col-md-offset-2">
           <h2 class="centered">Contact Form</h2>
 
-          <form class="contact-form php-mail-form" role="form" action="contactform/contactform.php" method="POST">
+          <form action="php/mailform.php" method="post" id="mail_form">
+          	<dl>
+          		<dt>会社名<span>Company Name</span></dt>
+          		<dd><input type="text" id="company" name="company" value="" /></dd>
 
-            <div class="form-group">
-              <input type="name" name="name" class="form-control" id="contact-name" placeholder="お名前" data-rule="minlen:4" data-msg="Please enter at least 4 chars" >
-              <div class="validate"></div>
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" class="form-control" id="contact-email" placeholder="メール" data-rule="email" data-msg="Please enter a valid email">
-              <div class="validate"></div>
-            </div>
-            <div class="form-group">
-              <input type="text" name="subject" class="form-control" id="contact-subject" placeholder="題名" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
-              <div class="validate"></div>
-            </div>
+          		<dt>名前<span>Your Name</span></dt>
+          		<dd class="required"><input type="text" id="name_1" name="name_1" value="" /> <input type="text" id="name_2" name="name_2" value="" /></dd>
 
-            <div class="form-group">
-              <textarea class="form-control" name="message" id="contact-message" placeholder="メッセージ" rows="5" data-rule="required" data-msg="Please write something for us"></textarea>
-              <div class="validate"></div>
-            </div>
+          		<dt>ふりがな<span>Name Reading</span></dt>
+          		<dd><input type="text" id="read_1" name="read_1" value="" /> <input type="text" id="read_2" name="read_2" value="" /></dd>
 
-            <div class="loading"></div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your message has been sent. Thank you!</div>
+          		<dt>メールアドレス<span>Mail Address</span></dt>
+          		<dd class="required"><input type="email" id="mail_address" name="mail_address" value="" /></dd>
 
-            <div class="form-send">
-              <button type="submit" class="btn btn-large">Send Message</button>
-            </div>
+          		<dt>メールアドレス<br />(確認用)<span>Mail Address Confirm</span></dt>
+          		<dd><input type="email" id="mail_address_confirm" name="mail_address_confirm" value="" /></dd>
 
+          		<dt>性別<span>Gender</span></dt>
+          		<dd>
+          			<ul>
+          				<li><label><input type="radio" class="gender" name="gender" value="男性" />男性</label></li>
+          				<li><label><input type="radio" class="gender" name="gender" value="女性" />女性</label></li>
+          			</ul>
+          		</dd>
+
+          		<dt>お問い合わせの内容<span>Mail Contents</span></dt>
+          		<dd class="required"><textarea id="mail_contents" name="mail_contents" cols="40" rows="5"></textarea></dd>
+
+          		<dt>愛の告白<span>Message</span></dt>
+          		<dd><textarea id="message" name="message" cols="40" rows="5"></textarea></dd>
+          	</dl>
+
+          	<p id="form_submit"><input type="button" id="form_submit_button" value="送信する" /></p>
           </form>
 
         </div>

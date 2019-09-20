@@ -1,29 +1,14 @@
 <?php
-  /**
-  * Requires the PHP Mail Form library
-  * The PHP Mail Form library is available only in the pro version of the template
-  * The library should be uploaded to: lib/php-mail-form/php-mail-form.php
-  * For more info and help: https://templatemag.com/php-mail-form/
-  */
+mb_language("Japanese");
+mb_internal_encoding("UTF-8");
 
-  if( file_exists($php_mail_form_library = '../lib/php-mail-form/php-mail-form.php' )) {
-    include( $php_mail_form_library );
-  } else {
-    die( 'Unable to load the PHP Mail Form Library!');
-  }
+$to = $_POST['name'];
+$title = $_POST['email'];
+$content = $_POST['message'];
 
-  $contactform = new PHP_Mail_Form;
-  $contactform->ajax = true;
-
-  // Replace with your real receiving email address
-  $contactform->to = 'contact@example.com';
-  $contactform->from_name = $_POST['name'];
-  $contactform->from_email = $_POST['email'];
-  $contactform->subject = $_POST['subject'];
-
-  $contactform->add_message( $_POST['name'], 'From');
-  $contactform->add_message( $_POST['email'], 'Email');
-  $contactform->add_message( $_POST['message'], 'Message', 10);
-
-  echo $contactform->send();
+if(mb_send_mail($to, $title, $content)){
+echo "メールを送信しました";
+} else {
+echo "メールの送信に失敗しました";
+}
 ?>
