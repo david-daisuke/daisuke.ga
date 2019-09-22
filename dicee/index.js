@@ -12,7 +12,7 @@ var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images
 
 //querySelectorAllを使って,html上のimgの１番目をつまり[0]
 //を指定する。そして、それをimage1という変数に入れる。
-var image1 = document.querySelectorAll("img")[1];
+var image1 = document.querySelectorAll("img")[10];
 
 //上記のimg1にsetAttributeで属性を与えている。
 //<img class="img1" src="images/dice6.png">
