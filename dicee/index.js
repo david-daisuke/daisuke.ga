@@ -13,7 +13,7 @@ var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images
 //querySelectorAllを使って,img という要素の１番め
 //の要素を取り出して変数imgage1に入れている
 // img class="img1"
-var image1 = document.querySelectorAll("img")[0];
+var image1 = document.querySelectorAll("img")[1];
 
 //上記のimg1にsetAttributeで属性を与えている。
 //<img class="img1" src="images/dice6.png">
@@ -31,11 +31,11 @@ document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
 
 //下記はもし、プレイヤー１が勝ったときの挙動を定義
 if (randomNumber1 > randomNumber2) {
-  document.querySelector("h1").innerHTML = "🚩 プレイヤー１の勝ち!";
+  document.querySelector("h1").innerHTML = "プレイヤ １の勝ち!";
 }
 //　else if で　プレイヤー２が勝ったときの挙動を表示
 else if (randomNumber2 > randomNumber1) {
-  document.querySelector("h1").innerHTML = "プレイヤー２の勝ち! 🚩";
+  document.querySelector("h1").innerHTML = "プレイヤ ２の勝ち! ";
 }
 //それ以外の場合は引き分け
 else {
