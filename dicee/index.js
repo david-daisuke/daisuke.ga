@@ -29,7 +29,7 @@ var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 // diceもimgesもどちらも作る方法をを適用している
 var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
 
-document.querySelectorAll("img")[0].setAttribute("src", randomImageSource2);
+document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
 
 
 //下記はもし、プレイヤー１が勝ったときの挙動を定義
