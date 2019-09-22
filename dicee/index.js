@@ -12,7 +12,9 @@ var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images
 
 //querySelectorAllを使って,html上のimgの１番目をつまり[0]
 //を指定する。そして、それをimage1という変数に入れる。
-var image1 = document.querySelectorAll("img")[-1];
+//querySelector は一つの要素しか取得できませんが、Allがつくと全ての要素を配列で取得してくれます。
+// サンプルコードを実行すると、リスト要素内をクリックで内部要素をアラート表示します。
+var image1 = document.querySelectorAll("img")[0];
 
 //上記のimg1にsetAttributeで属性を与えている。
 //<img class="img1" src="images/dice6.png">
@@ -27,7 +29,7 @@ var randomNumber2 = Math.floor(Math.random() * 6) + 1;
 // diceもimgesもどちらも作る方法をを適用している
 var randomImageSource2 = "images/dice" + randomNumber2 + ".png";
 
-document.querySelectorAll("img")[1].setAttribute("src", randomImageSource2);
+document.querySelectorAll("img")[0].setAttribute("src", randomImageSource2);
 
 
 //下記はもし、プレイヤー１が勝ったときの挙動を定義
