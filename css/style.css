@@ -36,7 +36,11 @@
 }
 
 .centered {
-	text-align: right
+	text-align: center
+}
+
+.left{
+  text-align: left
 }
 
 .mt {
