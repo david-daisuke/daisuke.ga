@@ -10,15 +10,16 @@ var randomDiceImage = "dice" + randomNumber1 + ".png"; //dice1.png - dice6.png
 // imagesというフォルダの下にimages/dice1.pngからdice6.pngまでのパスを作る
 var randomImageSource = "images/" + randomDiceImage; //images/dice1.png - images/dice6.png
 
-//querySelectorAllを使って,img という要素の１番め
-//の要素を取り出して変数imgage1に入れている
-// img class="img1"
+//querySelectorAllを使って,html上のimgの１番目をつまり[0]
+//を指定する。そして、それをimage1という変数に入れる。
 var image1 = document.querySelectorAll("img")[1];
 
 //上記のimg1にsetAttributeで属性を与えている。
 //<img class="img1" src="images/dice6.png">
-//上記のように、src　という属性に"randomImageSource"を代入うして
-// src="images/dice1.png"からsrc="images/dice6.png"までを代入する。
+//上記のように、src　という属性に"randomImageSource"を代入して
+// src="images/dice1.png"からsrc="images/dice6.png"までのランダムな数字を
+// いれる。これをsetAttributeで実現する。これにより、html上で、srcが１から６
+//までのランダムな数字を入れることができる。
 image1.setAttribute("src", randomImageSource);
 
 //ここから下はプレイヤー２の記述
