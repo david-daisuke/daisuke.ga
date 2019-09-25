@@ -11,7 +11,7 @@ app.get("/", function(req,res) {
   res.sendFile(__dirname + "/index.html");
 });
 
-app.post("/", function(req,res){
+app.post(__dirname, function(req,res){
   var num1 = Number(req.body.n1);
   var num2 = Number(req.body.n2);
   var result = num1 + num2;
