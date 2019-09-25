@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //絶対パスで sendFile するために__dirname と index.htmlを組み合わせて使う。
 //例えば、同一フォルダ内にpath.jsがあるがこれをnode できどうすると
 //  /Users/dkawanam/Projects/calculator と表示される。
-app.get("/", function(req,res) {
+app.get(__dirname, function(req,res) {
   res.sendFile(__dirname + "/index.html");
 });
 
