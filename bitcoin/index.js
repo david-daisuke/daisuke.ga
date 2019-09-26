@@ -13,6 +13,7 @@ app.post("/",function (req,res){
   var crypto = req.body.crypto;
   var fiat = req.body.fiat;
   var amount = req.body.amount;
+  console.log(amount);
 
   var options = {
     url:"https://apiv2.bitcoinaverage.com/convert/global",
@@ -22,7 +23,10 @@ app.post("/",function (req,res){
       to: fiat,
       amount: amount
     }
+
   };
+
+
 
   request(options, function (error,response,body){
     var data = JSON.parse(body);
@@ -36,6 +40,6 @@ app.post("/",function (req,res){
   });
 });
 
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
   console.log("Server is running on port 3000");
 });
