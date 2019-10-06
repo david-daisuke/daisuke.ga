@@ -25,6 +25,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
+	'trust proxy': true,
 });
 
 // Load your project's Models
