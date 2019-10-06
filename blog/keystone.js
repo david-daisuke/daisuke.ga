@@ -13,7 +13,7 @@ keystone.init({
 	'name': 'blog',
 	'brand': 'blog',
 
-	'sass': 'public',
+	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
@@ -25,7 +25,6 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'trust proxy': true,
 });
 
 // Load your project's Models
